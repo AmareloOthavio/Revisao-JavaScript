@@ -405,3 +405,74 @@ console.log("Exercício 43: ")
 console.log(exporObj(pessoa))
 
 /* Exercício 44 */
+var palavraExiste = false
+for (prop in pessoa) {
+    if (prop == 'bagre') {
+        palavraExiste = true
+    }
+}
+if (palavraExiste == true) {
+    console.log("Exercício 44: ",'bagre é uma propriedade')
+}
+else {
+    console.log("Exercício 44: ",'"bagre" não é uma proprieade')
+}
+
+/* Exercício 45 */
+var array12 = [30,22,34,18,17,16,23]
+var soma2 = 0
+for (pos in array12) {
+    soma2 += array12[pos]
+}
+console.log("Exercício 45: ",soma2/array12.length)
+
+/* Exercício 46 */
+var soma3 = 0
+var qtdProp = 0
+const numerosObj = {
+    numero1: 459,
+    numero2: 433,
+    numero3: 22.3,
+    numero4: 231.008
+}
+for (prop in numerosObj) {
+    soma3 += numerosObj[prop]
+    qtdProp += 1
+}
+console.log('Exercício 46: ',soma3/qtdProp)
+
+/* Exercício 47 */
+const livro = {
+    titulo: 'Ideias para adiar o fim do mundo',
+    autor: 'Ailton Krenak',
+    ano: 2019
+}
+console.log('Exercício 47: ',livro.titulo,' por ',livro.autor, ' foi lançado em ',livro.ano)
+
+/* Exercício 48 */
+delete livro.ano
+console.log('Exercício 48: ',livro)
+
+/* Exercício 49 */
+if (pessoa.idade >= 18) {
+    console.log('Exercício 49: ','Pode dirigir')
+}
+else {
+    console.log('Exercício 49: ','Não pode dirigir')
+}
+
+/* Exercício 50 */
+produto1 = {
+    nome: 'teclado',
+    preco: 60.75,
+    categoria: 'Eletrônico'
+}
+function formatarProd(prod) {
+    let textoFormatado = ''
+    textoFormatado += prod.nome
+    textoFormatado += ': R$'
+    textoFormatado += prod.preco
+    textoFormatado = textoFormatado.replace('.',',')
+    return textoFormatado
+}
+console.log('Exercício 50: ',formatarProd(produto1))
